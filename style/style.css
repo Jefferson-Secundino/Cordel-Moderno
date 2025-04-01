@@ -141,7 +141,7 @@ footer {
 @media (max-width: 768px) {
     #img01, #img02 {
         height: 15em;
-        background-attachment: fixed;
+        background-attachment: scroll;
     }
 
     .text, .text-imagem {
