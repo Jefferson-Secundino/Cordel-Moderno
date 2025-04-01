@@ -1,0 +1,251 @@
+/* Define o charset do arquivo como UTF-8 para suportar caracteres especiais */
+@charset "UTF-8";
+
+/* Carrega a fonte personalizada 'Bebas Neue' do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Carrega a fonte personalizada 'Android' */
+@font-face {
+    font-family: 'Android'; /* Nome da fonte personalizada */
+    src: url('../fontes/idroid.otf') format('opentype'); /* Caminho da fonte */
+    font-weight: normal; /* Peso da fonte (normal) */
+}
+
+/* Define variáveis de cores e fontes para reutilização */
+:root {
+    --cor0: #c5ebd6; /* Verde claro */
+    --cor1: #83e1ad; /* Verde médio */
+    --cor2: #3ddc84; /* Verde vibrante */
+    --cor3: #2fa866; /* Verde escuro */
+    --cor4: #1a5c37; /* Verde muito escuro */
+    --cor5: #063d1e; /* Verde quase preto */
+
+    --fonte-padrao: Arial, Helvetica, sans-serif; /* Fonte padrão */
+    --fonte-destaque: 'Bebas Neue', cursive; /* Fonte de destaque (Bebas Neue) */
+    --fonte-Android: 'Android', cursive; /* Fonte personalizada (Android) */
+}
+
+/* Reset básico para remover padding e margin padrão e definir box-sizing */
+* {
+    padding: 0px; /* Remove padding padrão */
+    margin: 0px; /* Remove margin padrão */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho do elemento */
+}
+
+/* Define o corpo da página como um contêiner flexível em coluna */
+body {
+    display: flex; /* Ativa o layout flexível */
+    flex-direction: column; /* Organiza os elementos filhos em coluna */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura total da viewport */
+    min-width: 200px; /* Define uma largura mínima para o corpo */
+    font-family: var(--fonte-padrao); /* Define a fonte padrão */
+    background-color: var(--cor1); /* Cor de fundo do corpo */
+}
+
+/* Garante que o HTML e o corpo ocupem 100% da largura e evita rolagem horizontal */
+html, body {
+    width: 100%; /* Ocupa 100% da largura disponível */
+    max-width: 100%; /* Impede que a largura ultrapasse 100% */
+    overflow-x: hidden; /* Esconde qualquer conteúdo que ultrapasse a largura */
+}
+
+/* Bloco: header */
+header {
+    background-image: linear-gradient(to top, var(--cor4), var(--cor3)); /* Gradiente de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Ocupa 100% da largura disponível */
+}
+
+/* Título dentro do bloco header */
+.header__titulo {
+    padding: 30px; /* Espaçamento interno */
+    font-family: var(--fonte-destaque); /* Fonte de destaque */
+    font-size: 3.6em; /* Tamanho da fonte */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.30); /* Sombra no texto */
+}
+
+/* Descrição dentro do bloco header */
+.header__descricao {
+    padding-bottom: 20px; /* Espaçamento inferior */
+    font-size: 20px; /* Tamanho da fonte */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.30); /* Sombra no texto */
+    max-width: 500px; /* Largura máxima */
+    margin: auto; /* Centraliza o elemento */
+}
+
+/* Bloco: nav */
+nav {
+    display: flex; /* Ativa o layout flexível */
+    background-color: var(--cor4); /* Cor de fundo */
+    width: 100%; /* Ocupa 100% da largura disponível */
+    flex-wrap: wrap; /* Permite que os itens quebram para a próxima linha */
+}
+
+/* Elemento: links dentro do bloco nav */
+nav a {
+    display: inline-block; /* Exibe como bloco em linha */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Texto em negrito */
+    color: var(--cor0); /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px; /* Espaçamento externo */
+    transition: background-color 0.3s, color 0.4s; /* Transição suave */
+}
+
+/* Efeito hover para os links do nav */
+nav a:hover {
+    background-color: var(--cor0); /* Cor de fundo ao passar o mouse */
+    color: var(--cor5); /* Cor do texto ao passar o mouse */
+    border-radius: 3px; /* Bordas arredondadas */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.30); /* Sombra no texto */
+    transition: background-color 0.3s, color 0.4s; /* Transição suave */
+}
+
+/* Bloco: main */
+main {
+    background-color: white; /* Cor de fundo */
+    width: 90%; /* Largura do bloco */
+    max-width: 800px; /* Largura máxima */
+    padding: 30px; /* Espaçamento interno */
+    margin: 0 auto; /* Centraliza o bloco */
+    border-radius: 0px 0px 20px 20px; /* Bordas arredondadas */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.30); /* Sombra */
+    overflow-x: hidden; /* Esconde conteúdo que ultrapasse a largura */
+}
+
+/* Classe para links personalizados */
+.link {
+    background-color: var(--cor0); /* Cor de fundo */
+    color: var(--cor4); /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 2px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Adiciona o emoji DEPOIS do texto do link */
+.link::after {
+    content: ' \1F517'; /* Emoji de link */
+}
+
+/* Efeito hover para links personalizados */
+.link:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+    color: blue; /* Cor do texto ao passar o mouse */
+}
+
+
+/* Estilo para parágrafos dos textos */
+.text {
+    text-align: justify; /* Alinhamento justificado */
+    line-height: 1.3em; /* Altura da linha */
+    text-indent: 25px; /* Recuo da primeira linha */
+    padding: 20px 0px; /* Espaçamento interno */
+}
+
+/* Estilo para títulos h2 com gradiente de fundo */
+.h2 {
+    font-family: var(--fonte-Android); /* Fonte personalizada */
+    color: var(--cor5); /* Cor do texto */
+    background-image: linear-gradient(to right, var(--cor2), transparent); /* Gradiente */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 2px; /* Bordas arredondadas */
+}
+
+/* Estilo para imagens responsivas */
+.img {
+    height: auto; /* Altura automática */
+    width: auto; /* Largura automática */
+    max-height: 300px; /* Altura máxima */
+    max-width: 100%; /* Largura máxima */
+    display: block; /* Exibe como bloco */
+    margin: auto; /* Centraliza a imagem */
+}
+
+/* Contêiner para vídeos responsivos (proporção 16:9) */
+.video {
+    position: relative; /* Posicionamento relativo */
+    padding-bottom: 60.75%; /* Proporção 16:9 */
+    overflow: hidden; /* Esconde conteúdo que ultrapasse o contêiner */
+    height: 0; /* Altura inicial */
+    background-color: var(--cor4); /* Cor de fundo */
+    margin: 0px -30px 30px -30px; /* Espaçamento negativo para alinhar com o conteúdo */
+}
+
+/* Iframe dentro do contêiner de vídeo */
+.video__iframe {
+    position: absolute; /* Posicionamento absoluto */
+    width: 90%; /* Largura total */
+    height: 90%; /* Altura total */
+    top: 5%; /* Alinha no topo */
+    left: 5%; /* Alinha à esquerda */
+}
+
+/* Bloco: aside (seção adicional) */
+.aside {
+    background-color: var(--cor0); /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.30); /* Sombra */
+}
+
+/* Título do aside */
+.aside__titulo {
+    background-color: var(--cor3); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px 10px 0px 0px; /* Bordas arredondadas */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.30); /* Sombra no texto */
+}
+
+/* Textos dentro do aside */
+.aside__text {
+    padding: 10px; /* Espaçamento interno */
+    text-align: justify; /* Alinhamento justificado */
+    text-indent: 20px; /* Recuo da primeira linha */
+}
+
+/* Lista com duas colunas */
+.ul {
+    column-count: 2; /* Divide a lista em duas colunas */
+    padding-left: 40px; /* Espaçamento à esquerda */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    list-style-position: inside; /* Posiciona os marcadores dentro da lista */
+    column-gap: 0px; /* Espaçamento entre colunas */
+    line-height: 1.4em; /* Altura da linha */
+}
+
+/* Rodapé da página */
+footer {
+    background-color: var(--cor4); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 5px; /* Espaçamento interno */
+    width: 100%; /* Ocupa 100% da largura */
+}
+
+a:hover::before {
+    content: '';
+    position: absolute; /* Posiciona o pseudo-elemento */
+    bottom: 0; /* Começa na parte inferior do link */
+    left: 0; /* Começa da esquerda */
+    width: 0%; /* Inicialmente sem largura */
+    height: 2px; /* Altura inicial */
+    background: rgba(255, 255, 255, 0.2); /* Cor de fundo com 30% de opacidade */
+    animation: fill 1s forwards; /* Aplica a animação */
+}
+
+@keyframes fill {
+    0% {
+        width: 0%; /* Começa sem largura */
+    }
+    50% {
+        width: 100%; /* Cresce até cobrir a largura do link */
+        height: 2px; /* Mantém a altura */
+    }
+    100% {
+        width: 100%; /* Mantém a largura */
+       *height: 100%; /* Cresce para cobrir a altura do link */
+        background: rgba(255, 255, 255, 0.2); /* Cor de fundo com 30% de opacidade */
+		border-radius: 5px 5px 0px 0px;
+    }alterar a cor e 100% para PX
+}

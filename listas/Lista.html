@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html> <!-- INICIO DO ARQUIVO -->
+<head> <!-- CABEÇA DO HTML -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="Endereço da imagem" type="mage/x-icon">
+	<title>HTML LISTA</title> <!-- TITULO DA PAG aba navegador -->
+</head>
+<body> <!-- CORPO -->
+	<header>TESTE TESTE</header> <!-- CABEÇALHO NA PAG -->
+	<section>AQUI VAI O CONTEUDO</section> <!-- SEÇAO/TABELAS (noticia, esporte...) -->
+	<footer> </footer> <!-- RODAPE -->
+</body>
+</html>
+
+
+
+<nav></nav> <!-- MENU DE NAVEGAÇÃO -->
+<hr> <!-- LINHA -->
+<h1> </h1> <h2> </h2> <h3> </h3> <!-- NIVEL DA FONTE ate h6 -->
+<br> <br> <!-- QUEBRA DE LINHA enter -->
+<p> </p> <!-- PARAGRAFO -->
+<strong></strong> <!-- NEGRITO/SEMATICA -->
+<em></em> <!-- ITALICO/SEMANTICA -->
+<mark></mark> <!-- MARCAÇÃO DE TEXTO -->
+<ins></ins> <!-- TEXTO SUBLINHADO -->
+<dell></dell> <!-- TEXTO RISCADO -->
+<sub></sub> <!-- TEXTO SUBSCRITO -->
+<sup></sup> <!-- TEXTO SOBRESCRITO -->
+<q></q> <!-- TEXTO ENTRE "ASPAS" CITAÇÕES -->
+<blockquote cite="COLOCAR A REFERENCIA DA CITAÇÃO"></blockquote> <!-- TEXTO ENTRE "ASPAS" FORMALIDADE -->
+<abbr title="COLOCAR O SIGNIFICADO"></abbr> <!-- ABREVIAÇÃO -->
+<address></address> <!-- ENDEREÇO -->
+<bdo dir="rtl"> </bdo> <!-- TEXTO INVERTIDO -->
+
+
+
+
+
+Sub-escritas
+<abbr title="descriçao oculta">Aqui a ABREVIAÇÃO</abbr> <!-- Quando o conteúdo for uma abreviação e você quiser melhorar a acessibilidade ou fornecer mais contexto ao usuário. -->											
+<span title="descriçao oculta">Aqui a digitação</span> <!-- Quando precisar aplicar estilos ou manipulação de texto sem adicionar nenhum significado semântico ao conteúdo. -->
+<details open><summary>Titulo (visivel)</summary>Mensagem (oculta)</details> <!-- Quando precisar Mostrar/ocultar explicações ou conteúdos complementares ou informações adicionais sobre um tópico. -->
+
+
+
+Imagens, videos, audios
+<figure>
+<img src="Endereço da imagem" width="????px" height="????px">Descriçao da imagem <!-- unsplash.com -->
+</figure>
+<picture>
+  <source media="(max-width:????px)" srcset="Endereço da imagem">
+  <source media="(max-width:????px)" srcset="Endereço da imagem">
+  <img src="Endereço da imagem" alt="Descriçao da imagem">Descriçao da imagem
+</picture>
+
+<video src="Endereço do video" poster="Endereço da Capa" controls>Descriçao do video</video>
+<video poster="Endereço da Capa" controls>Descriçao do video
+	<source src="Endereço do video" type="video/mp4">
+</video>
+
+
+<audio src="Endereço do audio"controls>Descriçao do audio</audio>
+<audio controls>Descriçao do audio
+	<source src="Endereço do audio" type="audio/mpeg">
+</audio>
+
+
+Links
+<link rel="shortcut icon" href="Colocar o link" type="image/x-icon"> <!-- ICONE DA PAG -->
+<a href="colocar o link" target="_self">Descriçao</a> <!-- ABRE NA MESMA PÁG. -->
+<a href="colocar o link" target="_blank" rel="external">Descriçao</a> <!-- ABRE EM OUTRA PÁG/ABA nofollow-->
+<a href="colocar o link" download="nome do arquivo" type="application/xxx">Descriçao ou foto</a> <!-- FAZ O DOWNLOAD DO ARQUIVO pdf,zip,html... -->
+
+
+LISTAS
+<ol> <li>Numero</li> </ol> <!-- LISTA ORDENADA N* -->
+<ol type="" start=""> <li>1 2 3 4 </li> </ol> <!-- LISTA ORDENADA N* -->
+<ul> <li>Asteriscos</li> </ul> <!-- LISTA DESORDENADA * -->
+<ul type=""> <li>* * * * * </li> </ul> <!-- LISTA DESORDENADA*circle, square-->
+<dl> <dt> item 1<dd>item 2</dd> </dt> </dl> <!-- LISTA DEFINIÇAO -->
+<details open><summary>Titulo (visivel)</summary>Mensagem (oculta)</details>
+
+
+TABELA
+<table> <!-- DELIMITAÇÃO DA TABELA --> 
+	<caption> legenda da tabela</caption>
+	<thead><tr><th>DESCRIÇÃO</th></tr></thead> <!-- CABEÇÃLHO -->
+	<tbody><tr><td>DESCRIÇÃO</td></tr></tbody> <!-- COPO DA TABELA -->
+	<tfoot><tr><td>DESCRIÇÃO "TOTAL"</td></tr></tfoot> <!-- RODAPÉ -->
+</table>
+
+
+FOMULARIOS
+<form method="post" action="#"> </form>
+<fieldset> <legend>Titulo</legend> </fieldset>
+<label for="nome">Nome:</label> <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+<label for="email">Email:</label> <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+<label for="senha">Senha:</label> <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+<label for="arquivo">Arquivo:</label> <input type="file" name="arquivo" id="arquivo" required>
+<label for="data">Data:</label> <input type="date" name="data" id="data" required>
+<label for="hora">Hora:</label> <input type="time" name="hora" id="hora" required>
+<label for="numero">Numero:</label> <input type="number" name="numero" id="numero" required>
+<label for="url">URL:</label> <input type="url" name="url" id="url" required>
+<label for="range">Range:</label> <input type="range" name="range" id="range" required>
+<label for="color">Cor:</label> <input type="color" name="color" id="color" required>
+<label for="checkbox">Checkbox:</label> <input type="checkbox" name="checkbox" id="checkbox" required>
+<label for="radio">Radio:</label> <input type="radio" name="radio" id="radio" required>
+
+<br>
+&lt; &gt; <!-- less than e greater than -->
+&copy; <!-- direitos autorais -->
+&trade; <!-- marca registrada -->
+&reg; <!-- marca registrada -->
+&sect; <!-- seção -->
+&para; <!-- paragrafo -->
+&bull; <!-- bullet -->
+&mdash; <!-- traço longo -->
+
+
+
+
+.

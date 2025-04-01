@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/* Importação das fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/* Definição das variáveis CSS */
+:root {
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --font2: 'Passero One', cursive;
+    --font3: 'Sriracha', cursive;
+}
+
+:rote {
+	--font1: Verdana, Geneva, Tahoma, sans-serif;
+	--font2: 'Passero One',  cursive;
+	--font3: 'Sriracha', cursive;
+}
+
+/* Reset e configurações globais */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: tan;
+}
+
+/* Cabeçalho */
+header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 0.9375em;
+}
+
+header h1 {
+	font-family: var(--font2);
+	padding: 0.9375em;
+	font-size: 3.6em;
+}
+
+/* Links */
+a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3125em;
+    transition: all 0.5s;
+    position: relative;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+a:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 0.125em;
+    background: rgba(255, 255, 255, 0.2);
+    animation: fill 1s forwards;
+}
+
+@keyframes fill {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+        height: 0.125em;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+		border-radius: 0.3125em 0.3125em 0em 0em;
+    }
+}
+
+/* Seções de texto */
+.text {
+	font-family: var(--font3);
+	padding: 10vh 0vh 10vh 5vh;
+	background-color: white;
+	font-size: 2.1875em;
+	line-height: 1.5em;
+}
+
+.text-imagem {
+	font-family: var(--font3);
+	padding: 10vh 0vh 10vh 5vh;
+	color: white;
+	font-size: 2.1875em;
+	line-height: 1.5em;
+}
+
+.text-imagem > p {
+	display: inline-block;
+	padding: 0.3125em;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+section > p {
+	padding-bottom: 3em;
+}
+
+/* Seções imagem de fundo */
+#img01 {
+	width: 100%;
+	height: 23.5em;
+	background: url(../imagens/background001.jpg) no-repeat fixed center/cover;
+	
+}
+
+#img02 {
+	width: 100%;
+	height: 23.5em;
+	background: url(../imagens/background002.jpg) no-repeat fixed center/cover;
+	
+}
+
+/* Rodapé */
+footer {
+    background-color: #024059;
+    color: #f28705;
+    text-align: center;
+    padding: 0.625em;
+    width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
