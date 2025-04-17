@@ -1,170 +1,171 @@
 @charset "UTF-8";
 
 /* Importação das fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Passero+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
 
 /* Definição das variáveis CSS */
 :root {
-    --font1: Verdana, Geneva, Tahoma, sans-serif;
-    --font2: 'Passero One', cursive;
-    --font3: 'Sriracha', cursive;
+  --font1: Verdana, Geneva, Tahoma, sans-serif;
+  --font2: "Passero One", cursive;
+  --font3: "Sriracha", cursive;
 }
 
 :rote {
-	--font1: Verdana, Geneva, Tahoma, sans-serif;
-	--font2: 'Passero One',  cursive;
-	--font3: 'Sriracha', cursive;
+  --font1: Verdana, Geneva, Tahoma, sans-serif;
+  --font2: "Passero One", cursive;
+  --font3: "Sriracha", cursive;
 }
 
 /* Reset e configurações globais */
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	background-color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: black;
 }
 
 /* Cabeçalho */
 header {
-	background-color: black;
-	color: white;
-	text-align: center;
-	padding: 0.9375em;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0.9375em;
 }
 
 header h1 {
-	font-family: var(--font2);
-	padding: 0.9375em;
-	font-size: 3.6em;
+  font-family: var(--font2);
+  padding: 0.9375em;
+  font-size: 3.6em;
 }
 
 /* Links */
 a {
-    color: #ddd;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.3125em;
-    transition: all 0.5s;
-    position: relative;
+  color: #ddd;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.3125em;
+  transition: all 0.5s;
+  position: relative;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #fff;
+  text-decoration: underline;
+  color: #fff;
 }
 
 a:hover::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 0.125em;
-    background: rgba(255, 255, 255, 0.2);
-    animation: fill 0.8s forwards;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0.125em;
+  background: rgba(255, 255, 255, 0.2);
+  animation: fill 0.8s forwards;
 }
 
 @keyframes fill {
-    0% {
-        width: 0%;
-    }
-    50% {
-        width: 100%;
-        height: 0.125em;
-    }
-    100% {
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.2);
-		border-radius: 0.3125em 0.3125em 0em 0em;
-    }
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+    height: 0.125em;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.3125em 0.3125em 0em 0em;
+  }
 }
 
 /* Seções de texto */
 .text {
-	font-family: var(--font3);
-	padding: 10vh 0vh 5vh 7vh;
-	background-color: white;
-	font-size: 2.1875em;
-	line-height: 1.5em;
+  font-family: var(--font3);
+  padding: 10vh 0vh 5vh 7vh;
+  background-color: white;
+  font-size: 2.1875em;
+  line-height: 1.5em;
 }
 
 .text-imagem {
-	font-family: var(--font3);
-	padding-left: 7vh;
-	color: white;
-	font-size: 2.1875em;
-	line-height: 1.5em;
-	display: flex;
-	position: relative;
-  	align-items: center;
+  font-family: var(--font3);
+  padding-left: 7vh;
+  color: white;
+  font-size: 2.1875em;
+  line-height: 1.5em;
+  display: flex;
+  position: relative;
+  align-items: center;
 }
 
 section > p {
-	padding-bottom: 3em;
+  padding-bottom: 3em;
 }
 
 /* Seções imagem de fundo */
 #img01 {
-	width: 100%;
-	height: 23.5em;
-	background: url(../imagens/background001.jpg) no-repeat fixed center/cover;
-	
+  width: 100%;
+  height: 23.5em;
+  background: url(../imagens/background001.jpg) no-repeat fixed center/cover;
 }
 
 #img02 {
-	width: 100%;
-	height: 23.5em;
-	background: url(../imagens/background002.jpg) no-repeat fixed center/cover;
-	
+  width: 100%;
+  height: 23.5em;
+  background: url(../imagens/background002.jpg) no-repeat fixed center/cover;
 }
 
 /* Rodapé */
 footer {
-    background-color: #024059;
-    color: #f28705;
-    text-align: center;
-    padding: 0.625em;
-    width: 100%;
-	font-family: Arial, Helvetica, sans-serif;
+  background-color: #024059;
+  color: #f28705;
+  text-align: center;
+  padding: 0.625em;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
-    #img01, #img02 {
-        height: 15em;
-        background-attachment: scroll;
-    }
+  #img01,
+  #img02 {
+    height: 15em;
+    background-attachment: scroll;
+  }
 
-    .text, .text-imagem {
-        font-size: 1.5em;
-        padding: 5vh 0vh 5vh 3vh;
-    }
+  .text,
+  .text-imagem {
+    font-size: 1.5em;
+    padding: 5vh 0vh 5vh 3vh;
+  }
 
-    header h1 {
-        font-size: 2.5em;
-    }
+  header h1 {
+    font-size: 2.5em;
+  }
 }
 
 @media (max-width: 480px) {
-    #img01, #img02 {
-        height: 10em;
-    }
+  #img01,
+  #img02 {
+    height: 10em;
+  }
 
-    .text, .text-imagem {
-        font-size: 1.2em;
-        padding: 3vh 0vh 3vh 2vh;
-    }
+  .text,
+  .text-imagem {
+    font-size: 1.2em;
+    padding: 3vh 0vh 3vh 2vh;
+  }
 
-    header h1 {
-        font-size: 2em;
-    }
+  header h1 {
+    font-size: 2em;
+  }
 }
